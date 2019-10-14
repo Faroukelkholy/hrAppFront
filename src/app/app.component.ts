@@ -1,6 +1,8 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from './services/login.service';
+import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
+import {MatBottomSheet} from '@angular/material/bottom-sheet';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +12,7 @@ import { LoginService } from './services/login.service';
 export class AppComponent {
   title = 'hrApp';
   loggedIn = false;
-  constructor(private router: Router, public loginService: LoginService, private cdr: ChangeDetectorRef) {
+  constructor(private router: Router, public loginService: LoginService, private cdr: ChangeDetectorRef, private _bottomSheet: MatBottomSheet) {
     // console.log('localStorage: ', localStorage);
     // console.log('window localStorage: ', window.localStorage);
     // console.log('router.url', this.router.url);
@@ -32,5 +34,9 @@ export class AppComponent {
 
   ngOnChanges() {
     console.log('ngOnChanges: ');
+  }
+
+  openBottomSheet(): void {
+    this._bottomSheet.open(BottomSheetComponent);
   }
 }

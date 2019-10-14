@@ -10,9 +10,14 @@ import { ProfileComponent } from './profile/profile.component';
 import { BenefitComponent } from './benefit/benefit.component';
 import { HomeComponent } from './home/home.component';
 import {MatInputModule, MatCardModule, MatGridListModule, MatButtonModule,
-MatToolbarModule, MatIconModule, MatDialogModule} from '@angular/material';
+MatToolbarModule, MatIconModule, MatDialogModule, MatBottomSheetModule, MatListModule} from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ErrorComponent } from './error/error.component';
+import { CreateNewsComponent } from './create-news/create-news.component';
+import { CreateBenefitComponent } from './create-benefit/create-benefit.component';
+import { CreateEmployeeComponent } from './create-employee/create-employee.component';
+import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
+import { NewsComponent } from './news/news.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +27,13 @@ import { ErrorComponent } from './error/error.component';
     BenefitComponent,
     EmployeeComponent,
     HomeComponent,
-    ErrorComponent
+    ErrorComponent,
+    CreateNewsComponent,
+    CreateBenefitComponent,
+    CreateEmployeeComponent,
+    BottomSheetComponent,
+    BottomSheetComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
@@ -35,9 +46,11 @@ import { ErrorComponent } from './error/error.component';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    MatBottomSheetModule,
+    MatListModule
   ],
-  entryComponents: [ErrorComponent],
+  entryComponents: [ErrorComponent, BottomSheetComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

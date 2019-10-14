@@ -1,0 +1,12 @@
+<form  
+class="container"
+[formGroup]="newsForm" class="news-form" (ngSubmit)="submitNews()">
+  <mat-form-field class="news-full-width">
+    <input matInput placeholder="Title" type="text" formControlName="title">
+  </mat-form-field>
+
+  <mat-form-field class="news-full-width">
+    <textarea matInput placeholder="Description" type="text" formControlName="description"></textarea>
+  </mat-form-field>
+  <button color="primary" mat-raised-button  type="submit">Create News</button>
+</form>
