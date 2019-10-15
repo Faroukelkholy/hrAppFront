@@ -1,6 +1,6 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoginService } from './services/login.service';
+import { UserService } from './services/user.service';
 import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
 import {MatBottomSheet} from '@angular/material/bottom-sheet';
 
@@ -12,11 +12,11 @@ import {MatBottomSheet} from '@angular/material/bottom-sheet';
 export class AppComponent {
   title = 'hrApp';
   loggedIn = false;
-  constructor(private router: Router, public loginService: LoginService, private cdr: ChangeDetectorRef, private _bottomSheet: MatBottomSheet) {
+  constructor(private router: Router, public userService: UserService, private cdr: ChangeDetectorRef, private _bottomSheet: MatBottomSheet) {
     // console.log('localStorage: ', localStorage);
     // console.log('window localStorage: ', window.localStorage);
     // console.log('router.url', this.router.url);
-    // console.log('LoginService', this.loginService.getLoggedIn());
+    // console.log('UserService', this.userService.getLoggedIn());
     // console.log('log:' ,this.router.getCurrentNavigation());
   }
 
@@ -26,8 +26,8 @@ export class AppComponent {
 
   ngAfterViewChecked() {
     // console.log('ngAfterViewChecked: ')
-    if (this.loginService.getLoggedIn()) {
-      this.loggedIn = this.loginService.getLoggedIn();
+    if (UserService.access_token) {
+      this.loggedIn = true;
       this.cdr.detectChanges();
     }
   }

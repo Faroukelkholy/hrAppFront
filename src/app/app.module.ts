@@ -18,6 +18,7 @@ import { CreateBenefitComponent } from './create-benefit/create-benefit.componen
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
 import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
 import { NewsComponent } from './news/news.component';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { NewsComponent } from './news/news.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     MatInputModule,
     MatCardModule,
     MatGridListModule,
