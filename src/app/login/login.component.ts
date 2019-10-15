@@ -24,7 +24,6 @@ export class LoginComponent implements OnInit {
   }
 
   submitLogin() {
-    console.log("logiin :", this.myLoginForm.value);
     this.userService.login(this.myLoginForm.value).subscribe((data: any) => {
       if (data.message === 'Success') {
         // this.storage.set('loggedIn',true);

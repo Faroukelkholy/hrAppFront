@@ -19,6 +19,10 @@ import { CreateEmployeeComponent } from './create-employee/create-employee.compo
 import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
 import { NewsComponent } from './news/news.component';
 import { HttpClientModule} from '@angular/common/http';
+import {MatTableModule} from '@angular/material/table';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatRadioModule} from '@angular/material/radio';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -50,10 +54,14 @@ import { HttpClientModule} from '@angular/common/http';
     MatIconModule,
     MatDialogModule,
     MatBottomSheetModule,
-    MatListModule
+    MatListModule,
+    MatTableModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule,
   ],
   entryComponents: [ErrorComponent, BottomSheetComponent],
-  providers: [],
+  providers: [MatNativeDateModule,MatDatepickerModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
