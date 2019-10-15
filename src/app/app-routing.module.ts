@@ -10,15 +10,15 @@ import { BenefitComponent } from './benefit/benefit.component';
 import { CreateBenefitComponent } from './create-benefit/create-benefit.component';
 
 
-const routes: Routes = [{ path: '', redirectTo: 'login', pathMatch: 'full' },
-{ path: 'login', component: LoginComponent },
-{ path: 'home', component: HomeComponent },
-{ path: 'benefits', component: BenefitComponent },
-{ path: 'profile', component: ProfileComponent },
-{ path: 'create-news', component: CreateNewsComponent },
-{ path: 'create-benefit', component: CreateBenefitComponent },
-{ path: 'create-employee', component: CreateEmployeeComponent },
-{ path: 'employees',  component: EmployeeComponent }];
+const routes: Routes = [{ path: '', redirectTo: 'app/login', pathMatch: 'full' },
+{ path: 'app/login', component: LoginComponent },
+{ path: 'app/home', component: HomeComponent },
+{ path: 'app/benefits', component: BenefitComponent },
+{ path: 'app/profile', component: ProfileComponent },
+{ path: 'app/create-news', component: CreateNewsComponent },
+{ path: 'app/create-benefit', component: CreateBenefitComponent },
+{ path: 'app/create-employee', component: CreateEmployeeComponent },
+{ path: 'app/employees',  component: EmployeeComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

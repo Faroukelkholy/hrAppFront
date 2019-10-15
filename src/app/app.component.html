@@ -1,11 +1,13 @@
 <mat-toolbar *ngIf="loggedIn" color="primary" class="navbar">
-    <button mat-button routerLink="home">Home</button>
+    <button mat-button routerLink="app/home">Home</button>
     <div>
-      <button mat-button routerLink="benefits">Benefits</button>
-      <button mat-button routerLink="profile">Profile</button>
-      <button mat-button routerLink="employees">Employees</button>
+      <button mat-button routerLink="app/benefits">Benefits</button>
+      <button mat-button routerLink="app/profile">Profile</button>
+      <button mat-button routerLink="app/employees">Employees</button>
       <button mat-button (click)="openBottomSheet()">Create</button>
+      <button mat-button (click)="logOut()">LogOut</button>
+
     </div>
   </mat-toolbar>
-
+  <mat-toolbar *ngIf="!loggedIn" color="primary">Login</mat-toolbar>
 <router-outlet></router-outlet>

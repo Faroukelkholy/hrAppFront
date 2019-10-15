@@ -7,7 +7,8 @@ import {
 export class BackendURL {
 
 
-    public static host: string = 'http://localhost:3000';
+    // public static host: string = 'http://localhost:3000';
+    public static host: string = ' https://hrwapp.herokuapp.com';
     public static auth: string = BackendURL.host + '/auth';
     public static users: string = BackendURL.host + '/users';
     public static posts: string = BackendURL.host + '/posts';

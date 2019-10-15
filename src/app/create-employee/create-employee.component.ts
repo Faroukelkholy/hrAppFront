@@ -37,7 +37,7 @@ export class CreateEmployeeComponent implements OnInit {
     this.userService.saveUser(this.employeeform.value).subscribe((data: any) => {
       console.log('!submitEmployee saveUser:', data);
       if (data.message === 'Success') {
-        this.router.navigate(['/employees']);
+        this.router.navigate(['/app/employees']);
       }
     }, (error) => {
       console.log('submitEmployee error :', error);

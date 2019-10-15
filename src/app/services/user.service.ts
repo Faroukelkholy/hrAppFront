@@ -12,7 +12,7 @@ import { User } from '../models/user.model';
 })
 export class UserService {
 
-  public static user: User;
+  public static user: any;
   public static access_token: string;
 
 

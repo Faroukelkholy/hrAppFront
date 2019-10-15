@@ -2,7 +2,7 @@ import { Component, ChangeDetectorRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from './services/user.service';
 import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
-import {MatBottomSheet} from '@angular/material/bottom-sheet';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
 
 @Component({
   selector: 'app-root',
@@ -27,5 +27,13 @@ export class AppComponent {
 
   openBottomSheet(): void {
     this._bottomSheet.open(BottomSheetComponent);
+  }
+
+  logOut() {
+    UserService.access_token = null;
+    localStorage.setItem('access_token', null);
+    this.loggedIn = false;
+    this.cdr.detectChanges();
+    this.router.navigate(['/app/login']);
   }
 }

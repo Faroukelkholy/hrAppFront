@@ -12,7 +12,7 @@ export class ErrorComponent {
 
   constructor(private dialogRef: MatDialogRef<ErrorComponent>, @Inject(MAT_DIALOG_DATA) public data: any,private router: Router) {
     dialogRef.afterClosed().subscribe(result => {
-      this.router.navigate(['/login']);
+      this.router.navigate(['/app/login']);
     });
   }
   public closeDialog() {

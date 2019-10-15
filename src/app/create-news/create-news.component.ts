@@ -41,7 +41,7 @@ export class CreateNewsComponent implements OnInit {
     this.postService.savePost(this.newsForm.value, 'news', this.user, this.access_token).subscribe((data: any) => {
       console.log('!submitNews savePost:', data);
       if (data.message === 'Success') {
-        this.router.navigate(['/home']);
+        this.router.navigate(['/app/home']);
       }
     }, (error) => {
       console.log('submitNews error :', error);

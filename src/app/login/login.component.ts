@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('user', data.user);
         UserService.access_token = data.access_token;
         UserService.user = data.user;
-        this.router.navigate(['/home']);
+        this.router.navigate(['/app/home']);
       } else if (data.message === 'Invalid username/password') {
         this.dialog.open(ErrorComponent,{ data: {
           message:  "Your login information are incorrect!"

@@ -40,7 +40,7 @@ export class CreateBenefitComponent implements OnInit {
     this.postService.savePost(this.benefitForm.value, 'benefit', this.user, this.access_token).subscribe((data: any) => {
       console.log('!submitNews savePost:', data);
       if (data.message === 'Success') {
-        this.router.navigate(['/benefits']);
+        this.router.navigate(['/app/benefits']);
       }
     }, (error) => {
       console.log('submitNews error :', error);
